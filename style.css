@@ -6,7 +6,7 @@
 body {
     font-family: 'Bebas Neue', cursive;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    
 }
 
 #container {
@@ -21,14 +21,32 @@ header {
     text-align: center;
 }
 main {
+  
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     text-align: center;
     background-color: aliceblue;
     
 }
+#cards-space{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit);
+    grid-template-rows: auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    width: 10vw;
+    font-size: 19px;
+    background-color: #FFFEFA;
+}
+
 button {
-    margin-top: 5%;
+    margin-top: 10%;
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -42,7 +60,89 @@ button:hover {
 footer {
     font-weight: bold;
 }
+
 a{
     color: black;
     text-decoration: none;
+}
+
+input {
+    border: none;
+    background-color: rgb(231, 232, 235);
+    height: 60%;
+    
+}
+::placeholder{
+    color: black;
+    
+    font-size: 20px;
+}
+#card {
+    display: inline-grid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    height: 50vh;
+    width: 20vw;
+    border-radius: 10px;
+    padding: 20px;
+   
+   
+}
+#formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+#card h5 {
+    font-size: 20px;
+}
+#cards-space {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px;
+    gap: 40px;
+    
+
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    width: 25vw;
+    height: 30vh;
+    background-color: rgb(236, 133, 142);
+}
+
+#submitBtn{
+   width: 20vw; 
+   background-color: #7CE578;
+}
+#submitBtn:hover {
+    background-color: #54a552;
+}
+#checked{
+    position: relative;
+    width: 15px;
+    top: 15px;
+}
+
+button[submit]{
+    background: green;
+}
+.buttunOfCheckbox {
+    width: 20vw ;
+    background-color: #7CE578;
+    
+}
+
+.removeBtn {
+    width: 20vw ;
+    border:  2px solid red;
 }
