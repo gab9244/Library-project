@@ -6,7 +6,8 @@
 body {
     font-family: 'Bebas Neue', cursive;
     font-family: 'Poppins', sans-serif;
-    
+    overflow-x: hidden;
+    font-size: 25px;
 }
 
 #container {
@@ -15,10 +16,15 @@ body {
     align-items: center;
 }
 header {
+
     height: 10vh;
     background-color: rgb(236, 133, 142);
     width: 100vw;
     text-align: center;
+   
+}
+h3 {
+    position: sticky;
 }
 main {
   
@@ -31,32 +37,22 @@ main {
 #cards-space{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    
+    
 }
-.card {
+.cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+   
     width: 10vw;
     font-size: 19px;
-    background-color: #FFFEFA;
+    background-color: rgb(236, 133, 142);
 }
 
-button {
-    margin-top: 10%;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    border: none;
-    
-}
-button:hover {
-    background-color: rgb(141, 140, 140);
-}
+
 footer {
     font-weight: bold;
 }
@@ -70,6 +66,10 @@ input {
     border: none;
     background-color: rgb(231, 232, 235);
     height: 60%;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 2px solid red;
+    
     
 }
 ::placeholder{
@@ -77,16 +77,15 @@ input {
     
     font-size: 20px;
 }
-#card {
+#form {
     display: inline-grid;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: rgb(236, 133, 142);
     height: 50vh;
-    width: 20vw;
     border-radius: 10px;
     padding: 20px;
-   
+   box-shadow: 10px 20px;
    
 }
 #formContainer{
@@ -102,9 +101,9 @@ input {
 }
 #cards-space {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 20px;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 3fr) );
+    padding: 80px;
+    gap: 200px;
     
 
 }
@@ -114,35 +113,67 @@ input {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    margin: 10px;
+    margin: 20px;
     width: 25vw;
     height: 30vh;
     background-color: rgb(236, 133, 142);
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 15px 15px;
 }
 
 #submitBtn{
-   width: 20vw; 
+  
    background-color: #7CE578;
+   margin-top: 10%;
+  
+   height: 50px;
+   border-radius: 10px;
+   font-size: 20px;
+   border: none;
+    
 }
 #submitBtn:hover {
     background-color: #54a552;
 }
-#checked{
-    position: relative;
-    width: 15px;
-    top: 15px;
-}
+
 
 button[submit]{
     background: green;
 }
-.buttunOfCheckbox {
+.buttonOfCheckbox {
     width: 20vw ;
+    border:  2px solid black;
+    border-radius: 10px;
+    height: 15%;
+    width: 20vw;
+    font-size: 20px;
     background-color: #7CE578;
     
+}
+.buttonOfCheckboxFalse {
+    background-color: red;
 }
 
 .removeBtn {
     width: 20vw ;
     border:  2px solid red;
+    border-radius: 10px;
+    height: 15%;
+    width: 20vw;
+    font-size: 20px;
+   
 }
+ @media (max-width:1500px) {
+    #cards-space {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+        
+        }
+        .cards{
+           
+        }
+    
+ }
