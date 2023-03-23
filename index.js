@@ -64,7 +64,7 @@ function addBookToLibrary(){
     if(checkbox.checked == true){
     buttonOfcheck.innerHTML='Readed'}
     else {
-        buttonOfcheck.innerHTML ='NoReaded'
+        buttonOfcheck.innerHTML ='No read'
         buttonOfcheck.style.backgroundColor = 'red'
     }
     buttonOfcheck.classList.add('buttonOfCheckbox')
@@ -75,7 +75,7 @@ function addBookToLibrary(){
                 buttonOfcheck.innerHTML ='Readed'      
         } else {
             buttonOfcheck.style.backgroundColor ='red'
-            buttonOfcheck.innerHTML='NoReaded'
+            buttonOfcheck.innerHTML='No read'
         }
        
 })
